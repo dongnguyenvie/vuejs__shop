@@ -1,0 +1,45 @@
+<template>
+    <div class="container-fluid header">
+       <div class="container pt-3">
+           <div class="row">
+               <div class="header__logo col-md-3">
+                   <img src="../../assets/images/logo.png" alt="">
+               </div>
+               <div class="header__search col-md-6">
+                   <form action="">
+                       <div class="form-group">
+                           <font-awesome-icon icon="search" class="search__icon" />
+                           <input type="text" class="form-control" placeholder="Enter a keyword to search">
+                       </div>
+                   </form>
+               </div>
+               <div class="col-md-3 header__profile">
+                    <p>
+                        <span class="profile__cart --orange"><font-awesome-icon icon="shopping-cart" /></span>
+                        <span class="profile__like --orange"><font-awesome-icon icon="heart" /></span>
+                        <span class="profile__avartar">
+                            <img v-bind:src="avartar" alt="">
+                        </span>
+                    </p>
+               </div>
+           </div>
+       </div>
+       
+      
+    </div>
+</template>
+
+<script>
+    export default{
+        data(){
+            return {
+                avartar: 'https://i.imgur.com/01FDkUW.jpg'
+            }
+        }
+
+    }
+</script>
+
+<style lang="scss" scoped>
+     @import 'Header.scss'
+</style>

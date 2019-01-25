@@ -1,0 +1,47 @@
+.header{
+    background: #283593;
+    .header__search{
+        .search__icon{
+            position: absolute;
+            top: 10px;
+            left: 1.5em;
+            color: #283593;
+            opacity: 0.8;
+        }
+        input{
+            padding-left: 2.4em;
+            background: rgba(255,255,255,.27);
+            border: 0;
+            width: 93%;
+            height: 35px;
+            border-radius: 5px;
+            color: #fff;
+            &::placeholder{
+                color: #fff;
+            }
+        }
+    }
+    .header__profile{
+        text-align: center;
+        .profile__cart, .profile__like, .profile__avartar{
+            border-radius: 50%;
+            overflow: hidden;
+            background: #ff5722;
+            padding: 5px;
+            color: #fff;
+            box-sizing: border-box;
+            width: 35px;
+            height: 35px;
+            display: inline-block;
+            text-align: center;
+            box-shadow:0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+            margin: 0 4px;
+        }
+        .profile__avartar{
+            padding: 0;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
