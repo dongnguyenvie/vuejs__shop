@@ -11,7 +11,7 @@
     "start": "node server.js",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e",
+    "test": "npm run unit && npm run e2e"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
