@@ -1,0 +1,19 @@
+.branch-top{
+    padding :0;
+    .branch-top__tool{
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        .tool__title{
+        }
+    }
+    .branch-top__block{
+        box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+        .block__img{
+            padding: 3em 0;
+            img{
+                max-width: 70%; 
+            }
+        }
+    }
+}

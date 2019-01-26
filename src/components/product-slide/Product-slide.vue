@@ -1,8 +1,9 @@
 <template>
     <div class="container-fluid product-slide-container">
         <div class="product-slide">
-            <carousel :autoplay="true" :responsive="{0:{items:1,nav:false},600:{items:2, dots:false ,center:true,loop:true, nav:false, margin:10}}">
-
+            <carousel 
+                :autoplay="true" 
+                :responsive="{0:{items:2, dots:false ,center:true,loop:true, nav:false, margin:10}}">
                 <div class="product-slide__block"
                     v-for="(slide, index) in slides" :key="index">
                     <div class="product-slide__border">
@@ -17,9 +18,6 @@
                         </div>
                     </div>
                 </div>
-
-                
-
             </carousel>
         </div>
     </div>  
