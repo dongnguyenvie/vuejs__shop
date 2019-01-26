@@ -8,6 +8,18 @@
     <app-product-slide/>
     <!--product-category-images-->
     <app-producte-category/>
+    <!-- product wrap -->
+    <app-product-wrap/>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
   </div>
 </template>
 
@@ -16,6 +28,8 @@ import headerComponent from './components/header/Header.vue'
 import menuHeaderComponent from './components/menu/Menu-header.vue'
 import productSlide from './components/product-slide/Product-slide.vue'
 import productCategory from './components/product-category/Product-category.vue'
+import productWrap from './components/product-deal/Product-deal.vue'
+
 export default {
   name: 'app',
   data () {
@@ -26,11 +40,14 @@ export default {
     appHeader: headerComponent,
     appMenuHeader: menuHeaderComponent,
     appProductSlide: productSlide,
-    appProducteCategory:productCategory
+    appProducteCategory:productCategory,
+    appProductWrap: productWrap
   }
 }
 </script>
 
 <style>
-
+body{
+  color: rgba(0,0,0,.87);
+}
 </style>

@@ -1,34 +1,10 @@
 <template>
     <div class="container product-category">
         <div class="row">
-            <div class="col-12 col-sm-6 col-md-4 product-category__block">
+            <div class="col-12 col-sm-6 col-md-4 product-category__block"
+                v-for="(category, index) in productCategorys" :key="index">
                 <a href="#">
-                    <img src="../../assets/images/product-category/headphone.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 product-category__block">
-                <a href="#">
-                    <img src="../../assets/images/product-category/mobile.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 product-category__block">
-                <a href="#">
-                    <img src="../../assets/images/product-category/shoes.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 product-category__block">
-                <a href="#">
-                    <img src="../../assets/images/product-category/sports.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 product-category__block">
-                <a href="#">
-                    <img src="../../assets/images/product-category/t-shirts.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 product-category__block">
-                <a href="#">
-                    <img src="../../assets/images/product-category/watch.jpg" alt="">
+                    <img :src="category.images" alt="">
                 </a>
             </div>
         </div>
@@ -36,8 +12,14 @@
 </template>
 
 <script>
+import productCategorys from './data.js'
+
 export default {
-    
+    data () {
+        return {
+            productCategorys
+        }
+    }
 }
 </script>
 
