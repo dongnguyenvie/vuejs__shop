@@ -2,7 +2,9 @@
 
 > A Vue.js project
 <hr>
-```<a href="https://vuejs-shop-desloy.herokuapp.com/">Live DEMO</a>```
+
+```<a href="https://vuejs-shop-desloy.herokuapp.com/">Live DEMO</a>
+
 ## Build Setup
 
 ``` bash
