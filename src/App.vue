@@ -10,6 +10,10 @@
     <app-producte-category/>
     <!-- product wrap -->
     <app-product-wrap/>
+    <!-- product top -->
+    <app-product-top/>
+
+    <!-- END -->
     <hr>
     <hr>
     <hr>
@@ -29,6 +33,7 @@ import menuHeaderComponent from './components/menu/Menu-header.vue'
 import productSlide from './components/product-slide/Product-slide.vue'
 import productCategory from './components/product-category/Product-category.vue'
 import productWrap from './components/product-deal/Product-deal.vue'
+import productTop from './components/product-top/Product-top.vue'
 
 export default {
   name: 'app',
@@ -41,7 +46,8 @@ export default {
     appMenuHeader: menuHeaderComponent,
     appProductSlide: productSlide,
     appProducteCategory:productCategory,
-    appProductWrap: productWrap
+    appProductWrap: productWrap,
+    appProductTop: productTop,
   }
 }
 </script>
