@@ -1,5 +1,5 @@
 .product-wrap{
-    padding: 5rem 0; 
+    padding: 5rem 0 0 0;  
 }
 .product-wrap__tool{
     display: flex;
@@ -19,9 +19,27 @@
 }
 
 .product-wrap__block{
+    button.block__more{
+        border: 2px solid #d8d8d8;
+        display: block;
+        padding: .8rem;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 2.5rem 0;
+        color: rgba(0,0,0,.54);
+        font-weight: 700;
+        cursor: pointer;
+        width:100%; 
+        background: none;
+    }
+    .block__product{
+        margin-bottom: 1.4em; 
+        position: relative;
+    }
+    
     .block__context{
         box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
-        padding: 1.5em 1.7em .5em 1.7em; 
+        padding: 1.5em 1.7em 2em 1.7em;  
         border-radius: 5px;
         overflow: hidden;
         background: #fff;
@@ -29,9 +47,17 @@
         &:hover{
             box-shadow: 0 0 16px 0 rgba(0,0,0,.12),0 16px 16px 0 rgba(0,0,0,.24);
         }
+        .context__sell{
+            position: absolute;
+            top: 8%;
+            left: 5%;
+            background: #ff5722;
+            padding: .3rem .6rem;
+            span{
+                color:#fff;
+            }
+        }
         .context__img{
-
-            
             img{
                 max-width: 100%;
             }
@@ -48,6 +74,13 @@
             p.price{
                 color: #ff5722; 
                 font-size: .875rem;
+            }
+            button.btn__cart{
+                &:hover{
+                    background: #ff5722; 
+                    border:none;
+                    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);    
+                }
             }
         }
     }
