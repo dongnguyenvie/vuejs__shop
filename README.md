@@ -1,7 +1,7 @@
 # theme-shop
 
 > A Vue.js project
-> <a href="https://vuejs-shop-desloy.herokuapp.com/">DEMO</a>
+> Live DEMO <a href="https://vuejs-shop-desloy.herokuapp.com/">DEMO</a>
 ## Build Setup
 
 ``` bash
