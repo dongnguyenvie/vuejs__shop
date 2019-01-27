@@ -1,5 +1,6 @@
 <template>
     <div class="container-fluid header">
+         <!-- <router-link to="/header">Go to header</router-link> -->
        <div class="container pt-3">
            <div class="row">
                <div class="header__logo col-md-3">

@@ -19,7 +19,8 @@
     "@fortawesome/vue-fontawesome": "^0.1.5",
     "express": "^4.16.4",
     "vue": "^2.5.11",
-    "vue-owl-carousel": "^2.0.3"
+    "vue-owl-carousel": "^2.0.3",
+    "vue-router": "^3.0.2"
   },
   "browserslist": [
     "> 1%",
