@@ -1,5 +1,6 @@
 <template>
     <div class="container-fluid subcribe-form">
+        
         <div class="subcribe-form__circle">
             <font-awesome-icon icon="check-square" />
         </div>
@@ -10,10 +11,8 @@
                     <p>Stay up to date with our latest new and products</p>
                     <div class="block__form">
                         <span>Your Email address</span>
-                        <form action="">
                         <input type="text" name="email" class="form__email" id="form__email">
-                        
-                        </form>
+                        <!-- <p><font-awesome-icon icon="paper-plane" rotation="45" /></p> -->
                     </div>
                 </div>
             </div>
@@ -25,7 +24,7 @@
 export default {
     data () {
         return {
-
+            
         }
     }
 }

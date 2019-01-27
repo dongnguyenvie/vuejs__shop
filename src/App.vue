@@ -16,18 +16,10 @@
     <app-top-branch />
     <!-- subscribe form -->
     <app-subscribe-form />
-
+    <!--footer-->
+    <app-footer/>
     <!-- END -->
-    <hr>
-    <hr>
-    <hr>
-    <hr>
-    <hr>
-    <hr>
-    <hr>
-    <hr>
-    <hr>
-    <hr>
+
   </div>
 </template>
 
@@ -40,6 +32,7 @@ import productWrap from './components/product-deal/Product-deal.vue'
 import productTop from './components/product-top/Product-top.vue'
 import topBranch from './components/Branch-top/Branch-top.vue'
 import subscribeForm from './components/subscribe-form/Subscribe-form.vue'
+import footer from './components/footer/Footer.vue'
 
 export default {
   name: 'app',
@@ -55,7 +48,8 @@ export default {
     appProductWrap: productWrap,
     appProductTop: productTop,
     appTopBranch: topBranch,
-    appSubscribeForm: subscribeForm
+    appSubscribeForm: subscribeForm,
+    appFooter : footer,
   }
 }
 </script>
