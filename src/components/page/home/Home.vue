@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <!--menu home-->
-    <app-menu-header/>
+
     <!--product slide-->
     <app-product-slide/>
     <!--product-category-images-->
@@ -21,7 +20,7 @@
 
 <script>
 
-import menuHeaderComponent from '../../menu/Menu-header.vue'
+
 import productSlide from './product-slide/Product-slide.vue'
 import productCategory from './product-category/Product-category.vue'
 import productWrap from './product-deal/Product-deal.vue'
@@ -37,15 +36,12 @@ export default {
     }
   },
   components:{
-
-    appMenuHeader: menuHeaderComponent,
     appProductSlide: productSlide,
     appProducteCategory:productCategory,
     appProductWrap: productWrap,
     appProductTop: productTop,
     appTopBranch: topBranch,
     appSubscribeForm: subscribeForm,
-
   }
 }
 </script>

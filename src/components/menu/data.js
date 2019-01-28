@@ -7,7 +7,7 @@ const data = [
             { name: 'Home one', path: '/Home' }
         ]
     },
-    { name: 'shop', path: '/home', type: 'nav__dropdown' },
+    { name: 'shop', path: '/shop', type: 'nav__dropdown' },
     { name: 'Accessories', path: '/home' },
     {
         name: 'Categories', path: '/home', type: 'nav__dropdown-style', children: [
@@ -50,21 +50,23 @@ const data = [
         ]
     },
     {
-        name: 'pages', path: '/home', type: 'nav__dropdown', children: [
+        name: 'pages', path: '/shop', type: 'nav__dropdown', children: [
             { name: 'Home one', path: '/Home' },
             { name: 'Home one', path: '/Home' },
             { name: 'Home one', path: '/Home' },
             { name: 'Home one', path: '/Home' }
         ]
     },
-    { name: 'session', path: '/home', type: 'nav__dropdown' },
     {
-        name: 'contact us', path: '/home', type: 'nav__dropdown', children: [
+        name: 'session', path: '/home', type: 'nav__dropdown', children: [
             { name: 'Home one', path: '/Home' },
             { name: 'Home one', path: '/Home' },
             { name: 'Home one', path: '/Home' },
             { name: 'Home one', path: '/Home' }
         ]
+    },
+    {
+        name: 'contact us', path: '/contact', type: 'nav__dropdown'
     }
 ]
 

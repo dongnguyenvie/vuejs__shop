@@ -1,8 +1,8 @@
 <template>
     <div class="container-fluid header">
-         <router-link to="/test">Go to header</router-link>
+         <!-- <router-link to="/test">Go to header</router-link>
          <router-link to="/home">Go to home</router-link>
-         <router-link to="/test/menu">Go to menu</router-link>
+         <router-link to="/test/menu">Go to menu</router-link> -->
        <div class="container pt-3">
            <div class="row">
                <div class="header__logo col-md-3">

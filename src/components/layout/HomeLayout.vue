@@ -1,7 +1,7 @@
 <template>
     <div>
-        
         <app-header/>
+        <app-menu></app-menu>
          <transition name="slide-fade" mode="out-in">
             <router-view></router-view>
          </transition>
@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import menuComponent from '../menu/Menu-header.vue'
 import headerComponent from '../header/Header.vue'
 import footerComponent from '../footer/Footer.vue'
 
@@ -21,7 +22,8 @@ export default {
     },
     components:{
         appHeader : headerComponent,
-        appFooter: footerComponent
+        appFooter: footerComponent,
+        appMenu: menuComponent,
     }
 }
 </script>
