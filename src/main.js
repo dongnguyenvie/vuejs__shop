@@ -14,13 +14,17 @@ Vue.use(listIcon)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 
+
 const router = new VueRouter({
   mode: 'history',
   routes
 })
 
+
+
 new Vue({
   el: '#app',
   render: h => h(App),
-  router: router
+  router: router,
+  data: { loading: false },
 })
