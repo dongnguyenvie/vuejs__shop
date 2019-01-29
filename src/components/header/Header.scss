@@ -23,9 +23,13 @@
     }
     .header__profile{
         text-align: center;
+        &>p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         .profile__cart, .profile__like, .profile__avartar{
             border-radius: 50%;
-            overflow: hidden;
             background: #ff5722;
             padding: 5px;
             color: #fff;
@@ -37,8 +41,12 @@
             box-shadow:0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
             margin: 0 4px;
         }
+        .profile__cart{
+            cursor: pointer; 
+        }
         .profile__avartar{
             padding: 0;
+            overflow: hidden; 
             img{
                 width: 100%;
             }

@@ -18,7 +18,13 @@
                </div>
                <div class="col-md-3 header__profile">
                     <p>
-                        <span class="profile__cart --orange"><font-awesome-icon icon="shopping-cart" /></span>
+                        <span class="profile__cart --orange" @click="showCart=!showCart"><font-awesome-icon  icon="shopping-cart" />
+                        <!-- cart component -->
+                        <transition v-if="showCart" name="fade">
+                            <app-cart/>
+                        </transition>
+                            
+                        </span>
                         <span class="profile__like --orange"><font-awesome-icon icon="heart" /></span>
                         <span class="profile__avartar">
                             <img v-bind:src="avartar" alt="">
@@ -33,14 +39,23 @@
 </template>
 
 <script>
-    export default{
-        data(){
-            return {
-                avartar: 'https://i.imgur.com/01FDkUW.jpg'
-            }
-        }
+import cartComponent from './cart/Cart.vue'
 
+export default{
+    data(){
+        return {
+            avartar: 'https://i.imgur.com/01FDkUW.jpg',
+            showCart: false,
+            isMenuOpen: false
+        }
+    },
+ 
+    components:{
+        appCart : cartComponent
     }
+
+
+}
 </script>
 
 <style lang="scss" scoped>

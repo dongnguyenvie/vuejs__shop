@@ -4,6 +4,7 @@ import homeLayout from '../components/layout/HomeLayout.vue'
 import home from '../components/page/home/Home.vue'
 import contact from '../components/page/contact/Contact.vue'
 import shop from '../components/page/shop/Shop.vue'
+import products from '../components/page/products/product.vue'
 
 let homePage = {
     path: '/',
@@ -42,6 +43,18 @@ let shopPage = {
     ]
 }
 
+let productsPage = {
+    path: '',
+    name: '',
+    component: homeLayout,
+    children:[
+        {
+            path: '/products',
+            component: products
+        }
+    ]
+}
+
 let test = {
     path: '/test',
     name: 'test',
@@ -63,7 +76,8 @@ const routes = [
     homePage,
     contactPage,
     shopPage,
-    test
+    productsPage
+ //   test
 ]
 
 export default routes;

@@ -1,38 +1,7 @@
 <template>
     <div class="container-fluid menu-header-index">
         <div class="container">
-            <nav>
-                <ul class="nav__ul">
-                    <li v-for="(menu, index) in data" :key="index" :class="menu.type">
-          
-                        <router-link :to="{path: menu.path}" tag="a">
-                            {{menu.name}}
-                        </router-link>
-
-                        <ul v-if="menu.children && menu.type=='nav__dropdown'" class="sub-menu">
-                            <li v-for="(sub, index) in menu.children" :key="index">
-
-                                <router-link :to="{path: sub.path}" tag="a">
-                                    {{sub.name}}
-                                </router-link>
-
-                            </li>
-                        </ul>
-                        <ul v-else-if="menu.type=='nav__dropdown-style'" class="sub-menu">
-                            <li v-for="(subs, key) of menu.children" :key="key">
-                                    <a href="#" >{{subs.name}}</a>
-                                    <ul>
-                                        <li v-for="(sub, index) in subs.children" :key="index">
-                                            <router-link :to="{path: sub.path}" tag="a">
-                                                {{sub.name}}
-                                            </router-link>
-                                        </li>
-                                    </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+            <app-menu/>
             <!-- <nav>
                 <ul class="nav__ul">
                     <li class="nav__dropdown">
@@ -181,13 +150,17 @@
 </template>
 
 <script>
-import data from './data.js'
+
+import menuComponent from './menu-content/Menu-header-content.vue'
 
 export default {
     data () {
         return {
-            data
+            
         }
+    },
+    components:{
+        appMenu:menuComponent
     }
 }
 </script>

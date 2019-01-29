@@ -7,7 +7,7 @@ const data = [
             { name: 'Home one', path: '/Home' }
         ]
     },
-    { name: 'shop', path: '/shop', type: 'nav__dropdown' },
+    { name: 'shop', path: '/products', type: 'nav__dropdown' },
     { name: 'Accessories', path: '/home' },
     {
         name: 'Categories', path: '/home', type: 'nav__dropdown-style', children: [

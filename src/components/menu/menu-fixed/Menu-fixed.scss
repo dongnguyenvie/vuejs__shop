@@ -1,0 +1,28 @@
+.menu__fixed{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #283593;
+    z-index: 999999;
+    height: 64px;
+    width: 100%;
+    transition: transform .5s;
+    .container{
+        height: 100%;
+        .row{
+            height: 100%;
+            align-items: center;
+            nav{
+                padding-top: 13px;
+                .nav__ul{
+                    &>li{
+                        &>a{
+                            color: #fff !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
