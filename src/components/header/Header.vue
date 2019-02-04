@@ -6,7 +6,9 @@
        <div class="container pt-3">
            <div class="row">
                <div class="header__logo col-md-3">
-                   <img src="../../assets/images/logo.png" alt="">
+                   <router-link :to="{path: '/home'}" tag="a">
+                       <img src="../../assets/images/logo.png" alt="">
+                   </router-link>
                </div>
                <div class="header__search col-md-6">
                    <form action="">

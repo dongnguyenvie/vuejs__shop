@@ -3,7 +3,9 @@
         <div class="container ">
             <div class="row">
                 <div class="col-4">
-                    <img src="/src/assets/images/logo.png" alt="">
+                    <router-link :to="{path: '/home'}" tag="a">
+                       <img src="/src/assets/images/logo.png" alt="">
+                   </router-link>
                 </div>
                 <div class="col-8">
                     <app-menu/>

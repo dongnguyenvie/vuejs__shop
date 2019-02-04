@@ -4,7 +4,8 @@
             <div class="col-12 col-md-3 product__tool">
                 <div>
                     <div class="tool__wrap">
-                        <input class="wrap__input" type="text" placeholder="Search a product">
+                        <input class="wrap__input" type="text" placeholder="Search a product" 
+                            v-model='searchVal'>
                     </div>
                     <div class="tool__wrap">
                         <div class="wrap__title">
@@ -17,13 +18,34 @@
                                 <span class="badge badge-secondary">{{menu.count}}</span></a>
                                 <ul>
                                     <li v-for="(menuChild, index) in menu.children" :key="index">
-                                        <a href="#" @click.prevent>{{menuChild.name}} 
+                                        <a href="#" 
+                                            @click.prevent="checkFilterProductByCate($event)"
+                                            :data-id='menuChild.id' >{{menuChild.name}} 
                                         <span class="badge badge-secondary">{{menuChild.count}}</span></a>  
                                     </li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
+
+                    <div class="tool__wrap">
+                        <div class="wrap__title">
+                            <b>Categories</b>
+                        </div>
+                        <ul class="wrap__ul">
+                            <li v-for="(category, index) in categories" :key="index">
+                                <label for="">
+                                    <input type="checkbox"
+                                        :data-id='category.id'
+                                        @change='checkFilterProduct($event)'/>
+                                    {{category.name}} 
+                                    <span class="badge badge-secondary">{{category.count}}</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+
                 </div>
             </div>
             <div class="col-12 col-md-9 page__product">
@@ -61,13 +83,15 @@
 </template>
 
 <script>
-import products, {menu} from './data.js'
+import products, {menu, categories} from './data.js'
 export default {
     data () {
         return {
             products,
             lstMenu: menu,
-            isActive: false
+            isActive: false,
+            searchVal: '',
+            categories
         }
     },
     methods: {
@@ -76,6 +100,33 @@ export default {
                 el.classList.remove('active')
             })
             e.target.parentNode.classList.add('active')
+        },
+        checkFilterProduct(e) {
+            if(e.target.checked) {
+                this.products = products.filter( el => {
+                    return el.branch == e.target.dataset.id
+                })
+               // console.log(e.target.dataset.id)
+            }
+        },
+        checkFilterProductByCate(e) {
+            this.products = products.filter( el => {
+                return el.branch == e.target.dataset.id
+            })
+           // console.log(e.target.dataset.id)
+        }
+    },
+    watch:{
+        searchVal(){
+            this.lstMenu = menu.filter( e => {
+                if(this.searchVal ==''){
+                    return e;
+                }
+                return e.name.toLowerCase().indexOf(this.searchVal) != -1 ? true : 
+                                            e.children.find( el => {
+                                                return el.name.toLowerCase().indexOf(this.searchVal) !=-1
+                                            }) ? true : false
+            })
         }
     }
 }
