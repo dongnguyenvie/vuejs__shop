@@ -1,5 +1,0 @@
-  "scripts": {
-    "start": "node server",
-    "heroku-postbuild": "echo Skip builds on Heroku"
-  },
-  "heroku-run-build-script": false
