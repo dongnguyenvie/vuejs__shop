@@ -17,7 +17,7 @@ app.get('/', function (req, res) {
   res.render(path.join(__dirname + 'index.html'))
 })
 
-
-app.listen(5000, function () {
-  console.log( 'Express serving on 5000!' )
+const PORT = process.env.PORT || 5000
+app.listen(PORT, function () {
+  console.log( 'Express serving on ', PORT )
 })
