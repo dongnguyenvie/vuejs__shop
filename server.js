@@ -1,5 +1,10 @@
+const express = require('express')
+const path = require('path')
+const history = require('connect-history-api-fallback')
+// ^ middleware to redirect all URLs to index.html
+
 const app = express()
-const staticFileMiddleware = express.static(path.join(__dirname, '/dist'))
+const staticFileMiddleware = express.static(path.join(__dirname))
 app.get('/dong', function (req, res) {
   res.send('hahaha')
 })
